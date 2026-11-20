@@ -1,17 +1,27 @@
-Simple-Grid (PySheet)
-Simple-Grid (PySheet) is a fast, light-themed desktop spreadsheet built with Python and PySide6, designed to handle large datasets—including 20 to 30+ lakh (2–3 million) rows—smoothly without freezing.
+# 📊 Simple-Grid (`PySheet`)
 
-Key Features
-High-Speed Large Dataset Performance: Virtual grid rendering and sparse column storage let you scroll, select, and work with tens of lakhs of rows effortlessly.
+> **A fast, crisp, Excel-like desktop spreadsheet built with Python & PySide6—engineered to handle 20–30+ lakh rows smoothly without freezing.**
 
-Excel & CSV Support: Open and save .xlsx Excel workbooks as well as .csv and .tsv files, with formula preservation in Excel exports.
+---
 
-Multiple Sheets (Sheet1 to Sheet10): Open up to 10 sheets in a workbook, switch between tabs without losing your place or filters, rename/manage tabs, and use cross-sheet formulas like =Sheet2!A1.
+## ✨ Highlights
 
-Excel-Style Formulas: Includes live function autocomplete and argument hints for SUM, AVERAGE, VLOOKUP, HLOOKUP, INDEX, MATCH, SUMIF, COUNTIF, IF, IFERROR, text functions, and more.
+* **⚡ Built for Massive Data (20–30+ Lakh Rows):** Virtual grid rendering, sparse column storage, and O(1) header selection keep scrolling, selecting, and editing responsive even on multi-million-row sheets.
+* **📁 Excel & CSV Read/Write:** Open and save `.xlsx` Excel workbooks as well as `.csv` and `.tsv` files, preserving formulas in Excel exports.
+* **📑 Multi-Sheet Workbooks (`Sheet1`–`Sheet10`):** Add up to 10 sheets using the bottom `+` tab bar, switch tabs while preserving scroll position and filters, rename/delete sheets, and use cross-sheet formulas like `=Sheet2!A1`.
+* **🧮 Excel-Style Formulas & Autocomplete:** Live function suggestions, argument hints, and point-and-click cell/range selection for `SUM`, `AVERAGE`, `VLOOKUP`, `HLOOKUP`, `INDEX`, `MATCH`, `SUMIF`, `COUNTIF`, `IF`, `IFERROR`, text utilities, and more.
+* **🔍 AutoFilter & Text to Columns:** Select data with `Ctrl+A`, toggle column filter dropdowns with `Ctrl+Shift+L`, and split delimited text into columns using the **Text to Columns** wizard.
+* **🖱️ Drag-Fill, Resizing & Row/Column Shifting:** Drag the bottom-right `+` fill handle to auto-fill series or formulas, drag header borders to resize columns/rows, and right-click row/column headers to shift positions with `Ctrl+Z` / `Ctrl+Y` Undo/Redo.
+* **🔄 Built-In Auto-Updates:** Automatically checks your GitHub manifest for newer versions and updates `.exe` or `.py` builds with one click.
 
-Filtering & Data Tools: Press Ctrl+A to select data and Ctrl+Shift+L (or click Filter) to filter values column by column, plus a Text to Columns wizard to split delimited text.
+---
 
-Drag-Fill, Resizing & Row/Column Shifting: Hover over the bottom-right fill handle for the + cursor to drag-fill values or formulas, drag row/column borders to resize, and right-click row or column headers to shift positions with Undo/Redo (Ctrl+Z / Ctrl+Y).
+## 🚀 Quick Start
 
-Built-In Auto-Updates: Checks for newer releases automatically and updates your .exe or .py build seamlessly when a new version is published.
+### Option 1: Run from Python
+
+```bash
+pip install PySide6 openpyxl
+pip install polars   # Optional: extra-fast CSV loading
+
+python SimpleGrid_v9.py [file.csv|file.xlsx]
